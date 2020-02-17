@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #DCDADC;
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+#container {
+    display: block;
+    width: 550px;
+    height: 400px;
+    background: #9ED1EA;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 5px 0px rgba(4, 159, 233, .9);
+    position: relative;
+}
+
+#score {
+    background: #f3FE95;
+    padding: 1rem;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    border-radius: 5px;
+    color: #31455C;
+    font-weight: 600;
+    box-shadow: 0 .3rem 0 #A0AA4D;
+}
+
+#correct,
+#wrong {
+    position: absolute;
+    top: 2vh;
+    left: 25vw;
+    padding: 1rem;
+    color: #31455C;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+#correct {
+    background: #5CB85C;
+    display: none;
+}
+
+#wrong {
+    background: #D9534F;
+    display: none;
+}
+
+#question {
+    font-size: 10rem;
+    width: 450px;
+    height: 120px;
+    background: #9DA0EB;
+    margin: 0 auto;
+    margin-top: 7vh;
+    box-shadow: 0 5px 0 #5658A8;
+    text-align: center;
+    line-height: 100px;
+    font-family: cursive, sans-serif;
+}
+
+#instruction {
+    background: #B480D9;
+    width: 450px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 1.4vh;
+    text-align: center;
+    box-shadow: 0 5px 0 #8551ab;
+    line-height: 50px;
+}
+
+#choices {
+    width: 450px;
+    height: 85px;
+    margin: 1.4vh auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#choices .box {
+    margin-top: 2px;
+    display: inline-block;
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 4px 0 #7fa4bc;
+    border-radius: 5px;
+    color: #31455C;
+    line-height: 80px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5rem;
+
+    position: relative;
+}
+
+#choices .box:hover,
+#startReset:hover {
+    background: #B480D9;
+    cursor: pointer;
+    color: #fff;
+}
+
+#startReset {
+    text-align: center;
+    background: rgba(255, 255, 255, .7);
+    width: 120px;
+    padding: 1rem;
+    margin-left: 150px;
+    box-shadow: 0 4px 0 #7fa4bc;
+    border-radius: 5px;
+    color: #31455C;
+    font-weight: bolder;
+}
+
+#choices .box:active,
+#startReset:active {
+    top: 4px;
+    box-shadow: none;
+    transition: top .3s ease-in-out;
+}
+
+#timeremaining {
+    background: #B0E452;
+    position: absolute;
+    top: 52.5vh;
+    right: 2vw;
+    padding: 1rem;
+    border-right: 5px;
+    color: #31455C;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 #50E452;
+    display: none;
+}
+
+#gameover {
+    width: 500px;
+    height: 30vh;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #F4CA6C, #F5736E);
+    position: absolute;
+    top: 12vh;
+    text-align: center;
+    color: #fff;
+    font-size: 5vw;
+    text-transform: uppercase;
+    z-index: 4;
+    display: none;
+}
+
+#gameover > div {
+    margin-top: 6vh;
+}
+
+#close {
+    width: 40px;
+    height: 40px;
+    color: #31455C;
+    font-weight: bolder;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    position: fixed;
+    top: 22vh;
+    z-index: 100;
+    right: 15vw;
+}
+
+#close:hover {
+    font-size: 32px;
+    color: crimson;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.colorme {
+    display: inline-block;
+    color: #fff;
+    font-family: cursive, "fira code";
+    font-weight: 700;
+    transform: scale(1.8);
+    margin-left: 6px;
+    text-shadow: 0px 2px 3px black;
+}
